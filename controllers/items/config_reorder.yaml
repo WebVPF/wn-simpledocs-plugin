@@ -1,0 +1,17 @@
+# ===================================
+#  Reorder Behavior Config
+# ===================================
+
+# Reorder Title
+title: webvpf.simpledocs::lang.config.reorder_title
+
+# Attribute name
+nameFrom: title
+
+# Model Class name
+modelClass: WebVPF\SimpleDocs\Models\Item
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: reorder_toolbar

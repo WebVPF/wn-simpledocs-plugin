@@ -1,0 +1,81 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    published:
+        label: webvpf.simpledocs::lang.fields.published
+        span: full
+        type: switch
+
+    title:
+        label: webvpf.simpledocs::lang.fields.title
+        span: auto
+        type: text
+
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+
+tabs:
+
+    icons:
+        webvpf.simpledocs::lang.fields.tab_content: icon-pencil
+        Meta: icon-search
+        JavaScript: icon-code
+        CSS: icon-css3
+
+    fields:
+        content:
+            type: markdown
+            size: giant
+            mode: split
+            tab: webvpf.simpledocs::lang.fields.tab_content
+
+        meta_title:
+            label: Meta Title
+            type: text
+            span: full
+            tab: Meta
+
+        meta_desc:
+            label: Meta Description
+            type: textarea
+            size: small
+            span: auto
+            tab: Meta
+
+        meta_key:
+            label: Meta Keywords
+            type: textarea
+            size: small
+            span: auto
+            tab: Meta
+
+        meta_img:
+            label: webvpf.simpledocs::lang.fields.meta_img
+            type: mediafinder
+            mode: image
+            imageWidth: '150'
+            imageHeight: '150'
+            span: auto
+            tab: Meta
+
+        css:
+            type: codeeditor
+            span: full
+            size: giant
+            language: css
+            tab: CSS
+
+        js:
+            type: codeeditor
+            span: full
+            size: giant
+            language: javascript
+            tab: JavaScript

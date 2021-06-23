@@ -1,0 +1,7 @@
+div > code,
+p > code,
+li > code {
+    color: #D14;
+    background: #ffe8f7;
+    padding: 0px 7px;
+}

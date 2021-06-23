@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: webvpf.simpledocs::lang.config.name
+
+# Model Form Field configuration
+form: $/webvpf/simpledocs/models/item/fields.yaml
+
+# Model Class name
+modelClass: WebVPF\SimpleDocs\Models\Item
+
+# Default redirect location
+defaultRedirect: webvpf/simpledocs/items
+
+# Create page
+create:
+    title: webvpf.simpledocs::lang.config.create_title
+    redirect: webvpf/simpledocs/items/update/:id
+    redirectClose: webvpf/simpledocs/items
+
+# Update page
+update:
+    title: webvpf.simpledocs::lang.config.edit_title
+    redirect: webvpf/simpledocs/items
+    redirectClose: webvpf/simpledocs/items
+
+# Preview page
+preview:
+    title: webvpf.simpledocs::lang.config.preview_title
