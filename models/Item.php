@@ -39,6 +39,26 @@ class Item extends Model
         $this->content_html = Markdown::parse($this->content);
     }
 
+    /**
+     * Событие после создания новой модели
+     */
+    public function afterCreate()
+    {
+        if ($this->published) {
+            \Cache::forget('simpledocs_menu_items');
+        }
+    }
+    
+    /**
+     * Событие после обновления модели
+     */
+    public function afterUpdate()
+    {
+        if ($this->title != $this->original['title'] || $this->slug != $this->original['slug'] || $this->published != $this->original['published'] || $this->sort_order != $this->original['sort_order']) {
+            \Cache::forget('simpledocs_menu_items');
+        }
+    }
+
     public function setUrl($pageName, $controller)
     {
         $params = [

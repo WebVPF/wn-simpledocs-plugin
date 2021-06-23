@@ -34,8 +34,8 @@ class Menu extends ComponentBase
     {
         $allItems = Item::orderBy('sort_order', 'asc')
                         ->where('published', true)
-                        ->select('title', 'slug')
-                        ->get();
+                        ->remember(43200, 'simpledocs_menu_items')
+                        ->get(['title', 'slug']);
 
         $allItems->each(function($item) {
             $item->setUrl($this->property('docPage'), $this->controller);
