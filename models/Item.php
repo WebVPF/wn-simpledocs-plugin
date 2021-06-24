@@ -60,6 +60,18 @@ class Item extends Model
             \Cache::forget('simpledocs_menu_items');
         }
     }
+    
+    /**
+     * Событие после удаления модели
+     */
+    public function afterDelete()
+    {
+        \Cache::forget('simpledocs_item_' . $this->slug);
+
+        if ($this->original['published']) {
+            \Cache::forget('simpledocs_menu_items');
+        }
+    }
 
     public function setUrl($pageName, $controller)
     {
