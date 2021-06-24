@@ -34,7 +34,7 @@ class Menu extends ComponentBase
     {
         $allItems = Item::orderBy('sort_order', 'asc')
                         ->where('published', true)
-                        ->remember(43200, 'simpledocs_menu_items')
+                        ->rememberForever('simpledocs_menu_items')
                         ->get(['title', 'slug']);
 
         $allItems->each(function($item) {

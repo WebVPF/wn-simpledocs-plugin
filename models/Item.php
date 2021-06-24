@@ -54,6 +54,8 @@ class Item extends Model
      */
     public function afterUpdate()
     {
+        \Cache::forget('simpledocs_item_' . $this->slug);
+        
         if ($this->title != $this->original['title'] || $this->slug != $this->original['slug'] || $this->published != $this->original['published'] || $this->sort_order != $this->original['sort_order']) {
             \Cache::forget('simpledocs_menu_items');
         }

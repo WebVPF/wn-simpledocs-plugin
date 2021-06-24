@@ -51,9 +51,13 @@ class Item extends ComponentBase
 
     public function onRun()
     {
-        $item = DocsItem::where('slug', $this->property('slug'))->first();
+        $item = DocsItem::where('slug', $this->property('slug'))
+                        ->rememberForever('simpledocs_item_' . $this->property('slug'))
+                        ->first();
 
-        if (empty($item)){
+        if (empty($item)) {
+            \Cache::forget('simpledocs_item_' . $this->property('slug'));
+
             return $this->controller->run('404');
         }
 
