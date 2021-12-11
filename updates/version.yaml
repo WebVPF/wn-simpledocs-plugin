@@ -1,3 +1,6 @@
 1.0.1:
     - Initialize plugin.
     - create_items_table.php
+1.0.2:
+    - Added the ability to connect css and js files to documentation pages
+    - v1.0.2/add_css_js_files_fields.php

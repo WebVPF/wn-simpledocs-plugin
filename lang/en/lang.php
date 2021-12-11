@@ -35,6 +35,10 @@ return [
         'title' => 'Name',
         'meta_img' => 'Meta image',
         'tab_content' => 'Content',
+        'repiter_prompt_css_files' => 'Add CSS file',
+        'label_add_url_css_files' => 'Enter Url CSS file',
+        'repiter_prompt_js_files' => 'Add JS file',
+        'label_add_url_js_files' => 'Enter Url JS file',
     ],
     'config' => [
         'name' => 'Document',

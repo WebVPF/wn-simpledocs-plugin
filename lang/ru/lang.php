@@ -35,6 +35,10 @@ return [
         'title' => 'Название',
         'meta_img' => 'Meta-изображение',
         'tab_content' => 'Содержание',
+        'repiter_prompt_css_files' => 'Добавить файл CSS',
+        'label_add_url_css_files' => 'Укажите Url-адрес CSS-файла',
+        'repiter_prompt_js_files' => 'Добавить файл JS',
+        'label_add_url_js_files' => 'Укажите Url-адрес JS-файла',
     ],
     'config' => [
         'name' => 'Документ',

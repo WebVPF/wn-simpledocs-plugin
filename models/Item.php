@@ -34,6 +34,14 @@ class Item extends Model
         'updated_at'
     ];
 
+    /**
+     * Поля в формате JSON
+     */
+    protected $jsonable = [
+        'css_files',
+        'js_files'
+    ];
+
     public function beforeSave()
     {
         $this->content_html = Markdown::parse($this->content);

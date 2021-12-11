@@ -63,6 +63,18 @@ class Item extends ComponentBase
 
         $this->page['item'] = $item;
         $this->page['title'] = $item->title;
+
+        if (!empty($item->css_files)) {
+            foreach ($item->css_files as $cssFile) {
+                $this->addCss($cssFile['url']);
+            }
+        }
+        
+        if (!empty($item->js_files)) {
+            foreach ($item->js_files as $jsFile) {
+                $this->addJs($jsFile['url']);
+            }
+        }
         
         $this->addCss('/plugins/webvpf/simpledocs/assets/css/hl_'. $this->property('stek') . '_' . $this->property('theme') . '.css', 'WebVPF.SimpleDocs');
 

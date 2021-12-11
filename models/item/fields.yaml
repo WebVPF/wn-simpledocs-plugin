@@ -66,12 +66,34 @@ tabs:
             span: auto
             tab: Meta
 
+        css_files:
+            type: repeater
+            prompt: webvpf.simpledocs::lang.fields.repiter_prompt_css_files
+            style: collapsed
+            form:
+                fields:
+                    url:
+                        label: webvpf.simpledocs::lang.fields.label_add_url_css_files
+                        type: text
+            tab: CSS
+
         css:
             type: codeeditor
             span: full
             size: giant
             language: css
             tab: CSS
+
+        js_files:
+            type: repeater
+            prompt: webvpf.simpledocs::lang.fields.repiter_prompt_js_files
+            style: collapsed
+            form:
+                fields:
+                    url:
+                        label: webvpf.simpledocs::lang.fields.label_add_url_js_files
+                        type: text
+            tab: JavaScript
 
         js:
             type: codeeditor
