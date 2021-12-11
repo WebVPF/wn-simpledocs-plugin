@@ -2,7 +2,6 @@
 
 use Cms\Classes\ComponentBase;
 use WebVPF\SimpleDocs\Models\Item as DocsItem;
-use Input;
 
 class Item extends ComponentBase
 {
