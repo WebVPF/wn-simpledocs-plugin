@@ -33,8 +33,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'WebVPF\SimpleDocs\Components\Item' => 'Item',
-            'WebVPF\SimpleDocs\Components\Menu' => 'Menu',
+            'WebVPF\SimpleDocs\Components\Item' => 'DocsItem',
+            'WebVPF\SimpleDocs\Components\Menu' => 'DocsMenu',
         ];
     }
 
