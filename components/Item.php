@@ -64,10 +64,10 @@ class Item extends ComponentBase
         $this->page['item'] = $item;
         $this->page['title'] = $item->title;
         
-        $this->addCss('/plugins/webvpf/simpledocs/assets/css/hl_'. $this->property('stek') . '_' . $this->property('theme') . '.css');
+        $this->addCss('/plugins/webvpf/simpledocs/assets/css/hl_'. $this->property('stek') . '_' . $this->property('theme') . '.css', 'WebVPF.SimpleDocs');
 
-        $this->addJs('/plugins/webvpf/simpledocs/assets/js/hl_' . $this->property('stek') . '.min.js');
-        $this->addJs('/plugins/webvpf/simpledocs/assets/js/docs.js');
+        $this->addJs('/plugins/webvpf/simpledocs/assets/js/hl_' . $this->property('stek') . '.min.js', 'WebVPF.SimpleDocs');
+        $this->addJs('/plugins/webvpf/simpledocs/assets/js/docs.js', 'WebVPF.SimpleDocs');
     }
 
 }
