@@ -30,10 +30,9 @@ docPage = "docs/item"
         <title>{{ this.page.title }}</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/plugins/webvpf/simpledocs/assets/img/icons/favicon.ico">
         <link rel="stylesheet" href="/plugins/webvpf/simpledocs/assets/css/modern-normalize.min.css">
+        <link rel="stylesheet" href="/plugins/webvpf/simpledocs/assets/css/simpledocs.css">
 
         {% styles %}
-
-        <link rel="stylesheet" href="/plugins/webvpf/simpledocs/assets/css/simpledocs.css">
 
         {% if item.css %}
             <style>{{ item.css|raw }}</style>
