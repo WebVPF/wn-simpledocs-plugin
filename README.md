@@ -40,7 +40,7 @@ docPage = "docs/item"
         {% endif %}
     </head>
     <body>
-        <div class="docs-menubar">
+        <aside class="docs-menubar">
             <div class="docs-logo">
                 <a href="/docs">
                     <img src="/plugins/webvpf/simpledocs/assets/img/logo.png" height="32" alt="Documentation">
@@ -49,11 +49,11 @@ docPage = "docs/item"
             </div>
 
             {% component 'DocsMenu' %}
-        </div>
+        </aside>
         
-        <div class="doc-content">
+        <main class="doc-content">
             {% page %}
-        </div>
+        </main>
 
         {% scripts %}
 
