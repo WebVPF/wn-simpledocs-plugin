@@ -97,3 +97,24 @@ Create a file `item.htm` in the folder `themes/nameTheme/pages/docs`
     theme = "default"
     ==
     {% component 'DocsItem' %}
+
+## Code highlighting
+
+Use Markdown syntax to insert example code into the text of your document.
+
+Before the beginning of the code and at the end, insert lines of characters <code>```</code>. Add the identifier of the programming language or technology to which the code belongs to the first three quotes. For example, for HTML the identifier is `html`, for CSS - `css`, for JavaScript - `javascript` or a short synonym `js`.
+
+Example of inserting PHP code:
+
+
+    ```php
+    public function nameFunction()
+    {
+        return 'Text';
+    }
+    ```
+
+### Language identifiers
+
+- [All identifiers](https://github.com/WebVPF/wn-simpledocs-plugin/wiki/highlight-%D0%92%D1%81%D0%B5-%D1%8F%D0%B7%D1%8B%D0%BA%D0%B8)
+- [stack WinterCMS](https://github.com/WebVPF/wn-simpledocs-plugin/wiki/highlight-%D1%81%D1%82%D0%B5%D0%BA-WinterCMS)
