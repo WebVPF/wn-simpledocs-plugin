@@ -18,18 +18,6 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function boot()
-    {
-        if (!App::runningInBackend()) {
-            return;
-        }
-
-        Event::listen('backend.page.beforeDisplay', function($controller, $action, $params) {
-            $controller->addCss('/plugins/webvpf/simpledocs/assets/css/backend.css', 'WebVPF.SimpleDocs');
-            $controller->addJs('/plugins/webvpf/simpledocs/assets/js/docs.js', 'WebVPF.SimpleDocs');
-        });
-    }
-
     public function registerComponents()
     {
         return [

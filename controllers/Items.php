@@ -20,5 +20,7 @@ class Items extends Controller
         parent::__construct();
 
         BackendMenu::setContext('WebVPF.SimpleDocs', 'simpledocs', 'items');
+
+        $this->addCss('/plugins/webvpf/simpledocs/assets/css/backend.css', 'WebVPF.SimpleDocs');
     }
 }
