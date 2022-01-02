@@ -4,9 +4,13 @@ Simple documentation for WinterCMS website
 
 ![SimpleDocs](https://raw.githubusercontent.com/WebVPF/wn-simpledocs-plugin/main/assets/img/icons/favicon-96x96.png)
 
+Screenshots: https://github.com/WebVPF/wn-simpledocs-plugin/issues/2
+
 ## Installing Composer
 
-    composer require webvpf/wn-simpledocs-plugin
+```bash
+composer require webvpf/wn-simpledocs-plugin
+```
 
 ## Documentation creation
 
@@ -16,7 +20,7 @@ To display documentation on the site, create three files (layout template and tw
 
 Create a new layout for your documentation template. To do this, create a file `docs.htm` with the following content in the folder `themes/nameTheme/layouts`:
 
-```
+```twig
 description = "Template for documentation"
 
 [DocsMenu]
@@ -74,28 +78,38 @@ Both of these pages will be hidden. Hidden pages are only available to logged in
 
 Create a file `docs.htm` in the folder `themes/nameTheme/pages/docs`
 
-    title = "Documentation"
-    url = "/docs"
-    layout = "docs"
-    is_hidden = 1
-    ==
-    <p>This is the main documentation page.</p>
+```ini
+title = "Documentation"
+url = "/docs"
+layout = "docs"
+is_hidden = 1
+==
+<p>This is the main documentation page.</p>
+
+```
 
 ### Documentation record output page
 
 Create a file `item.htm` in the folder `themes/nameTheme/pages/docs`
 
-    title = "Documentation record page"
-    url = "/docs/:slug"
-    layout = "docs"
-    is_hidden = 1
+```ini
+title = "Documentation record page"
+url = "/docs/:slug"
+layout = "docs"
+is_hidden = 1
 
-    [DocsItem]
-    slug = "{{ :slug }}"
-    stek = "wn"
-    theme = "default"
-    ==
-    {% component 'DocsItem' %}
+[DocsItem]
+slug = "{{ :slug }}"
+stek = "wn"
+theme = "default"
+==
+{% component 'DocsItem' %}
+
+```
+
+Styles for quick start connected in layout:
+
+![simpledocs_1](https://user-images.githubusercontent.com/61043464/147873706-3d33e189-34aa-48eb-97cd-6861462476a6.jpg)
 
 ## Code highlighting
 
