@@ -7,19 +7,25 @@ columns:
     sort_order:
         label: №
         searchable: false
-    
+        width: 60px
+        align: center
+
     title:
         label: webvpf.simpledocs::lang.fields.title
         searchable: true
-    
+
     published:
         label: webvpf.simpledocs::lang.fields.published
-    
+        type: partial
+        path: ~/plugins/webvpf/simpledocs/models/item/_published_column.htm
+        width: 150px
+        align: center
+
     created_at:
         label: webvpf.simpledocs::lang.fields.created
         type: date
         sortable: true
-    
+
     updated_at:
         label: webvpf.simpledocs::lang.fields.updated
         type: date
