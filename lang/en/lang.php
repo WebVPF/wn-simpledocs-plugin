@@ -39,6 +39,8 @@ return [
         'label_add_url_css_files' => 'Enter Url CSS file',
         'repiter_prompt_js_files' => 'Add JS file',
         'label_add_url_js_files' => 'Enter Url JS file',
+        'title_placeholder' => 'Record title',
+        'slug_placeholder' => 'item-slug',
     ],
     'config' => [
         'name' => 'Document',
@@ -56,5 +58,6 @@ return [
         'deleting' => 'Delete entry...',
         'confirm_delete' => 'Delete this entry?',
         'reorder' => 'Sort records',
+        'data_window_close_confirm' => 'The record not saved. Do you want to continue?',
     ],
 ];

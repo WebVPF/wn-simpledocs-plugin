@@ -5,36 +5,40 @@
 fields:
 
     published:
-        label: webvpf.simpledocs::lang.fields.published
-        span: full
         type: switch
+        span: storm
+        cssClass: col-xs-12 col-md-1
 
     title:
         label: webvpf.simpledocs::lang.fields.title
-        span: auto
+        span: storm
+        cssClass: col-xs-12 col-sm-6 col-md-6
         type: text
+        placeholder: webvpf.simpledocs::lang.fields.title_placeholder
 
     slug:
         label: Slug
-        span: auto
+        type: text
+        span: storm
+        cssClass: col-xs-12 col-sm-6 col-md-5
         preset:
             field: title
             type: slug
-        type: text
+        placeholder: webvpf.simpledocs::lang.fields.slug_placeholder
 
-tabs:
+    toolbar:
+        type: partial
+        path: item_toolbar
+        cssClass: collapse-visible
 
-    icons:
-        webvpf.simpledocs::lang.fields.tab_content: icon-pencil
-        Meta: icon-search
-        JavaScript: icon-code
-        CSS: icon-css3
-
+secondaryTabs:
+    stretch: true
     fields:
         content:
             type: markdown
             size: giant
             mode: split
+            stretch: true
             tab: webvpf.simpledocs::lang.fields.tab_content
 
         meta_title:

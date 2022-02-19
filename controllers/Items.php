@@ -15,6 +15,8 @@ class Items extends Controller
     public $listConfig = 'config_list.yaml';
     public $reorderConfig = 'config_reorder.yaml';
 
+    public $bodyClass = 'compact-container';
+
     public function __construct()
     {
         parent::__construct();
@@ -22,5 +24,6 @@ class Items extends Controller
         BackendMenu::setContext('WebVPF.SimpleDocs', 'simpledocs', 'items');
 
         $this->addCss('/plugins/webvpf/simpledocs/assets/css/backend.css', 'WebVPF.SimpleDocs');
+        $this->addJs('/plugins/webvpf/simpledocs/assets/js/backend-item-form.js', 'WebVPF.SimpleDocs');
     }
 }

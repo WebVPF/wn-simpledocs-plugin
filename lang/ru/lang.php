@@ -39,6 +39,8 @@ return [
         'label_add_url_css_files' => 'Укажите Url-адрес CSS-файла',
         'repiter_prompt_js_files' => 'Добавить файл JS',
         'label_add_url_js_files' => 'Укажите Url-адрес JS-файла',
+        'title_placeholder' => 'Название записи',
+        'slug_placeholder' => 'item-slug',
     ],
     'config' => [
         'name' => 'Документ',
@@ -56,5 +58,6 @@ return [
         'deleting' => 'Удаление записи...',
         'confirm_delete' => 'Удалить эту запись?',
         'reorder' => 'Сортировать записи',
+        'data_window_close_confirm' => 'Запись не была сохранена после изменений. Хотите продолжить?',
     ],
 ];

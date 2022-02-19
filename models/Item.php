@@ -22,8 +22,8 @@ class Item extends Model
      * @var array Validation rules for attributes
      */
     public $rules = [
-        'title'   => 'required',
-        'slug'    => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique']
+        'title' => 'required',
+        'slug' => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique']
     ];
 
     /**

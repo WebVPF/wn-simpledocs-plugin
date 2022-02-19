@@ -1,48 +1,25 @@
-<?php Block::put('breadcrumb') ?>
-    <ul>
-        <li><a href="<?= Backend::url('webvpf/simpledocs/items') ?>"><?= e(trans('webvpf.simpledocs::lang.controller.items')) ?></a></li>
-        <li><?= e($this->pageTitle) ?></li>
-    </ul>
-<?php Block::endPut() ?>
-
 <?php if (!$this->fatalError): ?>
 
-    <?= Form::open(['class' => 'layout']) ?>
-
-        <div class="layout-row">
-            <?= $this->formRender() ?>
-        </div>
-
-        <div class="form-buttons">
-            <div class="loading-indicator-container">
-                <button
-                    type="submit"
-                    data-request="onSave"
-                    data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="<?= e(trans('webvpf.simpledocs::lang.controller.creating')) ?>"
-                    class="btn btn-primary">
-                    <?= e(trans('backend::lang.form.create')) ?>
-                </button>
-                <button
-                    type="button"
-                    data-request="onSave"
-                    data-request-data="close:1"
-                    data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="<?= e(trans('webvpf.simpledocs::lang.controller.creating')) ?>"
-                    class="btn btn-default">
-                    <?= e(trans('backend::lang.form.create_and_close')) ?>
-                </button>
-                <span class="btn-text">
-                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('webvpf/simpledocs/items') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
-                </span>
-            </div>
-        </div>
+<div class="layout fancy-layout">
+    <?= Form::open([
+        'class' => 'layout',
+        'data-change-monitor' => 'true',
+        'data-window-close-confirm' => e(trans('webvpf.simpledocs::lang.controller.data_window_close_confirm')),
+        'id' => 'item-form'
+    ]) ?>
+        <?= $this->formRender() ?>
 
     <?= Form::close() ?>
+</div>
 
 <?php else: ?>
 
-    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+<div class="control-breadcrumb">
+    <?= Block::placeholder('breadcrumb') ?>
+</div>
+<div class="padded-container">
+    <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
     <p><a href="<?= Backend::url('webvpf/simpledocs/items') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')) ?></a></p>
+</div>
 
 <?php endif ?>

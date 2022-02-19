@@ -6,3 +6,4 @@
     - v1.0.2/add_css_js_files_fields.php
 1.0.3: Version 1.0.3
 1.0.4: Moved backend styles to plugin controller
+1.0.5: Improved edit/create record form
