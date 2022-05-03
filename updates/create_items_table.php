@@ -1,4 +1,6 @@
-<?php namespace WebVPF\SimpleDocs\Updates;
+<?php
+
+namespace WebVPF\SimpleDocs\Updates;
 
 use Schema;
 use Winter\Storm\Database\Schema\Blueprint;

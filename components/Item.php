@@ -1,4 +1,6 @@
-<?php namespace WebVPF\SimpleDocs\Components;
+<?php
+
+namespace WebVPF\SimpleDocs\Components;
 
 use Cms\Classes\ComponentBase;
 use WebVPF\SimpleDocs\Models\Item as DocsItem;

@@ -1,4 +1,6 @@
-<?php namespace WebVPF\SimpleDocs;
+<?php
+
+namespace WebVPF\SimpleDocs;
 
 use Backend;
 use App;

@@ -1,4 +1,6 @@
-<?php namespace WebVPF\SimpleDocs\Controllers;
+<?php
+
+namespace WebVPF\SimpleDocs\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;

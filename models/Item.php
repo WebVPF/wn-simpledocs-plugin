@@ -1,4 +1,6 @@
-<?php namespace WebVPF\SimpleDocs\Models;
+<?php
+
+namespace WebVPF\SimpleDocs\Models;
 
 use Model;
 use Markdown;
