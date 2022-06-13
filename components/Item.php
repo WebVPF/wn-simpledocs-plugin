@@ -8,7 +8,7 @@ use WebVPF\SimpleDocs\Models\Item as DocsItem;
 class Item extends ComponentBase
 {
 
-    public function componentDetails()
+    public function componentDetails(): array
     {
         return [
             'name'        => 'webvpf.simpledocs::lang.component.item.name',
@@ -16,7 +16,7 @@ class Item extends ComponentBase
         ];
     }
 
-    public function defineProperties()
+    public function defineProperties(): array
     {
         return [
             'slug' => [
@@ -52,7 +52,7 @@ class Item extends ComponentBase
 
     public function onRun()
     {
-        $item = DocsItem::where('slug', $this->property('slug'))
+        $item = DocsItem::whereSlug($this->property('slug'))
                         ->rememberForever('simpledocs_item_' . $this->property('slug'))
                         ->first();
 
@@ -65,22 +65,22 @@ class Item extends ComponentBase
         $this->page['item'] = $item;
         $this->page['title'] = $item->title;
 
+        $this->addCss('/plugins/webvpf/simpledocs/assets/css/hl_'. $this->property('stek') . '_' . $this->property('theme') . '.css', 'WebVPF.SimpleDocs');
+
         if (!empty($item->css_files)) {
             foreach ($item->css_files as $cssFile) {
                 $this->addCss($cssFile['url']);
             }
         }
-        
+
+        $this->addJs('/plugins/webvpf/simpledocs/assets/js/docs.js', 'WebVPF.SimpleDocs');
+        $this->addJs('/plugins/webvpf/simpledocs/assets/js/hl_' . $this->property('stek') . '.min.js', 'WebVPF.SimpleDocs');
+
         if (!empty($item->js_files)) {
             foreach ($item->js_files as $jsFile) {
                 $this->addJs($jsFile['url']);
             }
         }
-        
-        $this->addCss('/plugins/webvpf/simpledocs/assets/css/hl_'. $this->property('stek') . '_' . $this->property('theme') . '.css', 'WebVPF.SimpleDocs');
-
-        $this->addJs('/plugins/webvpf/simpledocs/assets/js/hl_' . $this->property('stek') . '.min.js', 'WebVPF.SimpleDocs');
-        $this->addJs('/plugins/webvpf/simpledocs/assets/js/docs.js', 'WebVPF.SimpleDocs');
     }
 
 }

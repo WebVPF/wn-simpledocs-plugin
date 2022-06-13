@@ -58,19 +58,19 @@ class Item extends Model
             \Cache::forget('simpledocs_menu_items');
         }
     }
-    
+
     /**
      * Событие после обновления модели
      */
     public function afterUpdate()
     {
-        \Cache::forget('simpledocs_item_' . $this->slug);
+        \Cache::forget('simpledocs_item_' . $this->original['slug']);
         
         if ($this->title != $this->original['title'] || $this->slug != $this->original['slug'] || $this->published != $this->original['published'] || $this->sort_order != $this->original['sort_order']) {
             \Cache::forget('simpledocs_menu_items');
         }
     }
-    
+
     /**
      * Событие после удаления модели
      */

@@ -3,13 +3,11 @@
 namespace WebVPF\SimpleDocs;
 
 use Backend;
-use App;
-use Event;
 use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
 {
-    public function pluginDetails()
+    public function pluginDetails(): array
     {
         return [
             'name'        => 'SimpleDocs',
@@ -20,7 +18,7 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function registerComponents()
+    public function registerComponents(): array
     {
         return [
             'WebVPF\SimpleDocs\Components\Item' => 'DocsItem',
@@ -28,7 +26,7 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function registerNavigation()
+    public function registerNavigation(): array
     {
         return [
             'simpledocs' => [

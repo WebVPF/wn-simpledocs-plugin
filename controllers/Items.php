@@ -8,9 +8,9 @@ use Backend\Classes\Controller;
 class Items extends Controller
 {
     public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController',
-        'Backend.Behaviors.ReorderController',
+        \Backend.Behaviors.FormController::class,
+        \Backend.Behaviors.ListController::class,
+        \Backend.Behaviors.ReorderController::class,
     ];
 
     public $formConfig = 'config_form.yaml';
