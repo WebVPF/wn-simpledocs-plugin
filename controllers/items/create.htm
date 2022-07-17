@@ -3,8 +3,6 @@
 <div class="layout fancy-layout">
     <?= Form::open([
         'class' => 'layout',
-        'data-change-monitor' => 'true',
-        'data-window-close-confirm' => e(trans('webvpf.simpledocs::lang.controller.data_window_close_confirm')),
         'id' => 'item-form'
     ]) ?>
         <?= $this->formRender() ?>
