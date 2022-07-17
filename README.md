@@ -115,10 +115,11 @@ Styles for quick start connected in layout:
 
 Use Markdown syntax to insert example code into the text of your document.
 
-Before the beginning of the code and at the end, insert lines of characters <code>```</code>. Add the identifier of the programming language or technology to which the code belongs to the first three quotes. For example, for HTML the identifier is `html`, for CSS - `css`, for JavaScript - `javascript` or a short synonym `js`.
+Before the beginning of the code and at the end, insert lines of characters <code>```</code>.
+
+Add the identifier of the programming language or technology to which the code belongs to the first three quotes. For example, for HTML the identifier is `html`, for CSS - `css`, for JavaScript - `javascript` or a short synonym `js`.
 
 Example of inserting PHP code:
-
 
     ```php
     public function nameFunction()
