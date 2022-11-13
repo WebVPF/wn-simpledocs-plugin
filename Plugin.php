@@ -21,8 +21,8 @@ class Plugin extends PluginBase
     public function registerComponents(): array
     {
         return [
-            'WebVPF\SimpleDocs\Components\Item' => 'DocsItem',
-            'WebVPF\SimpleDocs\Components\Menu' => 'DocsMenu',
+            \WebVPF\SimpleDocs\Components\Item::class => 'DocsItem',
+            \WebVPF\SimpleDocs\Components\Menu::class => 'DocsMenu',
         ];
     }
 
