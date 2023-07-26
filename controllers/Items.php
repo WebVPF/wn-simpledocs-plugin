@@ -28,4 +28,11 @@ class Items extends Controller
         $this->addCss('/plugins/webvpf/simpledocs/assets/css/backend.css', 'WebVPF.SimpleDocs');
         $this->addJs('/plugins/webvpf/simpledocs/assets/js/backend-item-form.js', 'WebVPF.SimpleDocs');
     }
+
+    public function onReorder()
+    {
+        $this->asExtension('ReorderController')->onReorder();
+
+        Cache::forget('simpledocs_menu_items');
+    }
 }
