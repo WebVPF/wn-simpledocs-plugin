@@ -4,6 +4,7 @@ namespace WebVPF\SimpleDocs\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Cache;
 
 class Items extends Controller
 {
