@@ -9,3 +9,4 @@
 1.0.5: Improved edit/create record form
 1.0.6: Fixes for Winter 1.2
 1.0.7: Clear menu cache after sorting
+1.0.8: Fixed cache clearing
