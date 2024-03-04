@@ -7,8 +7,9 @@ use Markdown;
 
 class Item extends Model
 {
-    use \Winter\Storm\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Nullable;
     use \Winter\Storm\Database\Traits\Sortable;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
@@ -19,6 +20,22 @@ class Item extends Model
      * @var array Guarded fields
      */
     protected $guarded = ['*'];
+
+    /**
+     * @var array Nullable attributes
+     */
+    protected $nullable = [
+        'content',
+        'content_html',
+        'meta_title',
+        'meta_desc',
+        'meta_key',
+        'meta_img',
+        'css',
+        'css_files',
+        'js',
+        'js_files',
+    ];
 
     /**
      * @var array Validation rules for attributes
